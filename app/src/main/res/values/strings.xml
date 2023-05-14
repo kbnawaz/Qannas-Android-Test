@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Qannas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="_1_d">1 D</string>
+    <string name="_1_w">1 W</string>
+    <string name="_1_m">1 M</string>
+    <string name="_1_y">1 Y</string>
+    <string name="all">All</string>
+    <string name="_0_to_24_hours">0 to 24 hours</string>
+    <string name="portfolio_performance">Portfolio Performance</string>
+    <string name="_2_71">2.71%</string>
+    <string name="zero_to_twenty_four_hrs">0 - 24 hours</string>
+    <string name="mon_to_sun">Mon - Sun</string>
+    <string name="sep_one_to_thirty">Sep 1 - Sep 30</string>
+    <string name="jan_to_dec">Jan - Dec</string>
+    <string name="twenty_twenty_three_to">2023 - 2011</string>
+</resources>
