@@ -59,7 +59,7 @@ class HomeChartsViewModel : ViewModel() {
             dataList(view, isType, context),
             context
         )
-        view.chart1.animateX(1500)
+        view.chart1.animateX(300)
         val l: Legend = view.chart1.legend
         l.form = Legend.LegendForm.LINE
         l.textSize = 11f

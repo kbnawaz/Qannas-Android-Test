@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,41 +11,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_margin="@dimen/_15sdp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="@dimen/_28sdp"
             android:layout_height="@dimen/_28sdp"
-            android:src="@drawable/performance_ic"/>
+            android:src="@drawable/performance_ic" />
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_5sdp"
             android:text="@string/portfolio_performance"
-            android:textSize="@dimen/_14sdp"
             android:textColor="@color/gray"
-            android:textStyle="normal"/>
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="end|center_vertical">
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal">
+
             <ImageView
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
-                android:src="@drawable/growth_ic"
-                android:layout_marginEnd="@dimen/_4sdp"/>
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:src="@drawable/growth_ic" />
+
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_2_71"
+                android:textColor="@color/green_100"
                 android:textSize="@dimen/_13sdp"
-                android:textStyle="bold"
-                android:textColor="@color/green_100"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
@@ -52,9 +55,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginBottom="@dimen/_10sdp"
-        android:layout_marginHorizontal="@dimen/_15sdp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -82,10 +85,10 @@
         <LinearLayout
             android:id="@+id/week_ll"
             android:layout_width="0dp"
-            android:layout_marginEnd="@dimen/_4sdp"
             android:layout_height="@dimen/_30sdp"
             android:layout_marginVertical="@dimen/_5sdp"
             android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
             android:layout_weight="1"
             android:background="@drawable/corner_shape_unselected"
             android:elevation="@dimen/_10sdp"
@@ -103,10 +106,10 @@
         <LinearLayout
             android:id="@+id/month_ll"
             android:layout_width="0dp"
-            android:layout_marginEnd="@dimen/_4sdp"
             android:layout_height="@dimen/_30sdp"
             android:layout_marginVertical="@dimen/_5sdp"
             android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
             android:layout_weight="1"
             android:background="@drawable/corner_shape_unselected"
             android:elevation="@dimen/_10sdp"
@@ -121,63 +124,99 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/year_ll"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_marginEnd="@dimen/_4sdp"
-            android:layout_marginVertical="@dimen/_5sdp"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:layout_weight="1"
-            android:background="@drawable/corner_shape_selected"
-            android:elevation="@dimen/_10sdp"
-            android:gravity="center">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_1_y"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/all_ll"
+        <FrameLayout
             android:layout_width="0dp"
-            android:layout_marginEnd="@dimen/_4sdp"
             android:layout_height="@dimen/_30sdp"
             android:layout_marginVertical="@dimen/_5sdp"
             android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
             android:layout_weight="1"
-            android:background="@drawable/corner_shape_unselected"
-            android:elevation="@dimen/_10sdp"
-            android:gravity="center">
+            android:background="@drawable/yellow_corner_shape_unselected"
+            android:elevation="@dimen/_10sdp">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/all"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold" />
-        </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/year_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:background="@drawable/corner_shape_selected">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/_4sdp"
+                    android:layout_height="@dimen/_4sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    app:cardBackgroundColor="#FFE500" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/_1_y"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:background="@drawable/yellow_corner_shape_unselected"
+            android:elevation="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:id="@+id/all_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:background="@drawable/corner_shape_selected">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/_4sdp"
+                    android:layout_height="@dimen/_4sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    app:cardBackgroundColor="#FFE500" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/all"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </FrameLayout>
+
     </LinearLayout>
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/filter_range_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_15sdp"
-        android:textSize="@dimen/_14sdp"
-        android:id="@+id/filter_range_txt"
+        android:text="@string/_0_to_24_hours"
         android:textColor="@android:color/darker_gray"
-        android:text="@string/_0_to_24_hours"/>
+        android:textSize="@dimen/_14sdp" />
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_240sdp"
-        android:layout_marginTop="@dimen/_30sdp"
-        android:layout_marginHorizontal="@dimen/_10sdp" />
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_30sdp" />
 
 </LinearLayout>
